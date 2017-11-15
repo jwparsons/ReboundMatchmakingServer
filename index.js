@@ -46,12 +46,15 @@ io.on('connection', function(socket) {
   });
 
   socket.on('server creation', function(data) {
-    console.log('server has been created');
+    console.log('server has been created' + '_' + data + '_');
     if (clients.length >= 4) {
-      // tell clients to join
+      // send clients server port number
+      for ( i = 0; i < 4; i++)
+        socket.broadcast.to(clients.shift()).emit('join game', data);
     }
     else {
-      // emit to server to terminate
+      // tell server to die lol
+      socket.broadcast.to(socket.id).emit('terminate', 'poop');
     }
   });
 });
