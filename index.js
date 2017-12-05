@@ -7,7 +7,7 @@ var events = require('events');
 var eventEmitter = new events.EventEmitter();
 
 // keep track of player queue
-var clients = []
+var clients = [];
 
 // app setup
 var app = express();
@@ -17,6 +17,9 @@ var server = app.listen(3000, function() {
 
 // socket setup
 var io = socket(server);
+
+// keep track of number of servers
+var numServers = 0;
 
 // create server when told to do so
 var createServer = function() {
@@ -51,10 +54,17 @@ io.on('connection', function(socket) {
       // send clients server port number
       for ( i = 0; i < 4; i++)
         socket.broadcast.to(clients.shift()).emit('join game', data);
+      numServers++;
     }
     else {
       // tell server to die lol
-      socket.broadcast.to(socket.id).emit('terminate', 'poop');
+      socket.broadcast.to(socket.id).emit('terminate', ':(');
     }
+  });
+
+  socket.on('end match', function(data) {
+    console.log('a match has ended');
+    socket.broadcast.to(socket.id).emit('terminate', ':(');
+    numServers--;
   });
 });
