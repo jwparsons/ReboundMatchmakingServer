@@ -1,5 +1,5 @@
 @echo off
-cd "F:\GitHub\ReboundMatchmakingServer\Rebound\Rebound\Binaries\Win64"
+cd "E:\GitHub\Rebound\WindowsNoEditor\Rebound\Binaries\Win64"
 start ReboundServer.exe -log
 
 exit
