@@ -64,7 +64,6 @@ io.on('connection', function(socket) {
 
   socket.on('end match', function(data) {
     console.log('a match has ended');
-    socket.broadcast.to(socket.id).emit('terminate', ':(');
     numServers--;
   });
 });
