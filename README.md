@@ -5,7 +5,7 @@ Rebound Matchmaking Server
 
 ## Introduction
 This repository contains the neccesary code for running the Matchmaking Server for Rebound, an online multiplayer arena deathmatch video game.
-You can also take a look at the [source code](https://github.com/jwparsons/Rebound) and the [demo] (with instructions)(https://github.com/jwparsons/Rebound_Demo).
+You can also take a look at the [source code](https://github.com/jwparsons/Rebound) and the [demo](with instructions)(https://github.com/jwparsons/Rebound_Demo).
 
 
 ## Requirements
