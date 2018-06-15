@@ -5,7 +5,7 @@ Rebound Matchmaking Server
 
 ## Introduction
 This repository contains the neccesary code for running the Matchmaking Server for Rebound, an online multiplayer arena deathmatch video game.
-You can also take a look at the [source code](https://github.com/jwparsons/Rebound) and the [demo](with instructions)(https://github.com/jwparsons/Rebound_Demo).
+You can also take a look at the [source code](https://github.com/jwparsons/Rebound) and the [demo](https://github.com/jwparsons/Rebound_Demo) (with instructions).
 
 
 ## Requirements
@@ -17,7 +17,7 @@ Running the matchmaking server requires [NodeJS](https://nodejs.org/en/).
 1. Run the command **node index** to start the matchmaking server.
 
 These instructions only describe how to start the matchmaking server.
-For a detailed explanantion of how to run Rebound with the matchmaking server, check out the Rebound_Demo repository.
+For a detailed explanantion of how to run Rebound with the matchmaking server, check out the [demo repository](https://github.com/jwparsons/Rebound_Demo).
 
 ## Contribution
 This project was created by me and Tyler Kelly for the class Concurrent, Parallel, & Distributed Programming at FSU.
